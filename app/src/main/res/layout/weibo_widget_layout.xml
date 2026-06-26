@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/weibo_widget_background"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- ══════════════════ HEADER ══════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <!-- Weibo Logo -->
+        <ImageView
+            android:id="@+id/weibo_logo"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_weibo_logo"
+            android:scaleType="fitCenter" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/widget_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="微博热搜"
+            android:textColor="#111111"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Refresh icon -->
+        <ImageView
+            android:id="@+id/btn_refresh"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_refresh"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Update time -->
+        <TextView
+            android:id="@+id/widget_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--:--"
+            android:textColor="#999999"
+            android:textSize="11sp"
+            android:gravity="end" />
+
+    </LinearLayout>
+
+    <!-- Header / List divider -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp" />
+
+    <!-- ══════════════════ LIST ══════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Item 1 -->
+        <LinearLayout android:id="@+id/item_row_0" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_0" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge_1" android:gravity="center" android:textColor="#FFFFFF" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_0" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/divider_0" android:layout_width="match_parent" android:layout_height="1dp" android:background="#B3F0F0F0" android:visibility="gone"/>
+
+        <!-- Item 2 -->
+        <LinearLayout android:id="@+id/item_row_1" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_1" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge_2" android:gravity="center" android:textColor="#FFFFFF" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/divider_1" android:layout_width="match_parent" android:layout_height="1dp" android:background="#B3F0F0F0" android:visibility="gone"/>
+
+        <!-- Item 3 -->
+        <LinearLayout android:id="@+id/item_row_2" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_2" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge_3" android:gravity="center" android:textColor="#FFFFFF" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/divider_2" android:layout_width="match_parent" android:layout_height="1dp" android:background="#B3F0F0F0" android:visibility="gone"/>
+
+        <!-- Item 4 -->
+        <LinearLayout android:id="@+id/item_row_3" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_3" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge" android:gravity="center" android:textColor="#666666" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/divider_3" android:layout_width="match_parent" android:layout_height="1dp" android:background="#B3F0F0F0" android:visibility="gone"/>
+
+        <!-- Item 5 -->
+        <LinearLayout android:id="@+id/item_row_4" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_4" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge" android:gravity="center" android:textColor="#666666" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/divider_4" android:layout_width="match_parent" android:layout_height="1dp" android:background="#B3F0F0F0" android:visibility="gone"/>
+
+        <!-- Item 6 -->
+        <LinearLayout android:id="@+id/item_row_5" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_5" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge" android:gravity="center" android:textColor="#666666" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_5" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/divider_5" android:layout_width="match_parent" android:layout_height="1dp" android:background="#B3F0F0F0" android:visibility="gone"/>
+
+        <!-- Item 7 -->
+        <LinearLayout android:id="@+id/item_row_6" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_6" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge" android:gravity="center" android:textColor="#666666" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_6" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/divider_6" android:layout_width="match_parent" android:layout_height="1dp" android:background="#B3F0F0F0" android:visibility="gone"/>
+
+        <!-- Item 8 -->
+        <LinearLayout android:id="@+id/item_row_7" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:visibility="gone">
+            <TextView android:id="@+id/item_rank_7" android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/weibo_rank_badge" android:gravity="center" android:textColor="#666666" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/item_title_7" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="10dp" android:ellipsize="end" android:maxLines="1" android:textColor="#222222" android:textSize="13sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
